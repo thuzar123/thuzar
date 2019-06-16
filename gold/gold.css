@@ -1,0 +1,27 @@
+#corner {
+    border-radius: 10px;
+  	border: 2px solid #FF9A98;
+    padding-right: 10px;
+   	padding-left: 10px;
+   	padding-top: 5px;
+   	padding-bottom: 5px; 
+    width: 120px;
+    height: 20px;    
+}
+#col{
+	font-family: TimesNewRoman;
+	font-size: 20px;
+	padding-left:30px;
+	padding-right: 20px;
+	
+}
+#join {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: TimesNewRoman;
+	font-size: 18px;
+	text-shadow: 8px 8px 10px #CD9854;
+	color: #31273B;
+	border: 2px solid #FF9A98;
+}

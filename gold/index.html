@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gold</title>
+	<script type="text/javascript">
+		function gold() {
+			var gram=parseInt(document.mygold.gram.value);
+			var gprice=parseInt(document.mygold.gprice.value);
+
+			var kyat=parseInt(gram/16.6);
+			var kyat1=(gram/16.6)-kyat;
+			var pae=parseInt(kyat1*16);
+			var pae1=(kyat1*16)-pae;
+			var yway=parseInt(pae1*8);
+
+			var pay=kyat+'-'+pae+'-'+yway;
+			document.mygold.kpy.value=pay;
+
+			var result=(kyat*128)+(pae*8)+yway;
+			document.mygold.price.value=(result/128)*gprice;
+
+			/*console.log(pae);
+			console.log(kyat);
+			console.log(yway);*/
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="gold.css">
+</head>
+<body background="gold1.jpg">
+	<form name="mygold">
+		<table align="center" border="0px" width="400px" height="470px" bgcolor="#BDB76B">
+		<tr>
+			<td colspan="2" align="center" style="font-size: 30px;font-family: Time News Roman;font-style:italic;" >Gold</td>
+		</tr>
+
+		<tr>
+			<td id="col"><label for="gram">Gram:</label></td>
+			<td id="col"><input  id="corner" type="number" name="gram" placeholder="Enter a gram" required="required"></td>
+		</tr>
+		<tr>
+			<td id="col"><label for="gprice">Gold Price:</label></td>
+			<td id="col"><input id="corner" type="number" name="gprice" placeholder="Enter a gold price" required="required"></td>
+		</tr>
+		
+		<tr>
+			<td id="col"><label for="kpy">Kyat Pae Yway:</label></td>
+			<td id="col"><input id="corner" type="text" name="kpy" readonly="readonly"></td>
+		</tr>
+		<tr>
+			<td id="col"><label for="price">Price:</label></td>
+			<td id="col"><input id="corner" type="text" name="price" readonly="readonly"></td>
+		</tr>
+		<tr>
+			<td id="col"><input type="button" id="join" name="calculate" value="Calculate" onclick="gold()"></td>
+			<td id="col">
+				<input type="reset" value="Clear" id="join" >
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>	
+</html>
